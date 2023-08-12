@@ -1,8 +1,8 @@
-package com.example.demo.controllers;
+package com.example.demo.Product.controllers;
 
 
-import com.example.demo.entities.Product;
-import com.example.demo.services.ProductService;
+import com.example.demo.Product.entities.Product;
+import com.example.demo.Product.services.ProductService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -36,9 +36,9 @@ public class ProductController {
         return service.getProducts();
     }
 
-    @GetMapping("/productById/{id}")
-    public Product finProductById(@PathVariable int id){
-        return service.getProductById(id);
+    @GetMapping("/productById/{ProductId}")
+    public Product finProductById(@PathVariable int ProductId){
+        return service.getProductById(ProductId);
     }
 
     @GetMapping("/product/{name}")
@@ -55,9 +55,9 @@ public class ProductController {
 
     //-------------------------------- Delete method -----------------------------------//
 
-    @DeleteMapping("/delete/{id}")
-    public  String deleteProduct(@PathVariable int id){
-        return service.deleteProduct(id);
+    @DeleteMapping("/delete/{ProductId}")
+    public  String deleteProduct(@PathVariable int ProductId){
+        return service.deleteProduct(ProductId);
     }
 
 

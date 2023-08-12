@@ -1,10 +1,9 @@
-package com.example.demo.services;
+package com.example.demo.Product.services;
 
-import com.example.demo.entities.Product;
-import com.example.demo.repositories.ProductRepository;
+import com.example.demo.Product.entities.Product;
+import com.example.demo.Product.repositories.ProductRepository;
 import org.springframework.stereotype.Service;
 
-import javax.print.attribute.standard.MediaSize;
 import java.util.List;
 
 @Service
@@ -32,8 +31,8 @@ public class ProductService {
         return repository.findAll();
     }
 
-    public Product getProductById(int id){
-        return repository.findById(id).orElse(null);
+    public Product getProductById(int ProductId){
+        return repository.findById(ProductId).orElse(null);
     }
 
     public Product getProductByName(String name){
@@ -41,14 +40,14 @@ public class ProductService {
     }
 
     //-------------------------------- Delete method -----------------------------------//
-    public String deleteProduct(int id){
-        repository.deleteById(id);
-        return "product removed !" + id;
+    public String deleteProduct(int ProductId){
+        repository.deleteById(ProductId);
+        return "product removed !" + ProductId;
     }
 
     //-------------------------------- Update method -----------------------------------//
     public Product updateProduct(Product product){
-        Product existingProduct = repository.findById(product.getId()).orElse(null);
+        Product existingProduct = repository.findById(product.getProductId()).orElse(null);
         existingProduct.setName(product.getName());
         existingProduct.setQuantity(product.getQuantity());
         existingProduct.setPrice(product.getPrice());

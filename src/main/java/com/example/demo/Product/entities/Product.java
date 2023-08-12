@@ -1,4 +1,4 @@
-package com.example.demo.entities;
+package com.example.demo.Product.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,7 +17,7 @@ public class Product {
 
     @Id
     @GeneratedValue
-    private int id;
+    private int ProductId;
     private String name;
     private int quantity;
     private double price;
