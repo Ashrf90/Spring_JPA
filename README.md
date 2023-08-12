@@ -1,2 +1,2 @@
-# Spring_JPA
-CRUD project: Spring_JPA + Mysql
+# ecommerceapp
+the backend of an e-commerce app using spring boot and MySQL
