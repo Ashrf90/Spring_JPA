@@ -1,4 +1,4 @@
-package com.example.demo.Product.entities;
+package com.example.demo.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,13 +12,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "PRODUCT_TBL")
-public class Product {
+@Table(name = "USER_TBL")
+public class User {
 
     @Id
     @GeneratedValue
-    private int ProductId;
+    private int Id;
     private String name;
-    private int quantity;
-    private double price;
+    private String surname;
+    private String email;
+    private String password;
+    private String address;
+
 }

@@ -1,7 +1,7 @@
-package com.example.demo.user.services;
+package com.example.demo.services;
 
-import com.example.demo.user.entities.User;
-import com.example.demo.user.repositories.userRepository;
+import com.example.demo.entities.User;
+import com.example.demo.repositories.userRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -52,6 +52,7 @@ public class UserService {
         existingUser.setSurname(user.getSurname());
         existingUser.setEmail(user.getEmail());
         existingUser.setPassword(user.getPassword());
+        existingUser.setAddress(user.getAddress());
         return repository.save(existingUser);
     }
 

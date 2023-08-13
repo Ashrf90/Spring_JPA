@@ -1,8 +1,8 @@
-package com.example.demo.Product.controllers;
+package com.example.demo.controllers;
 
 
-import com.example.demo.Product.entities.Product;
-import com.example.demo.Product.services.ProductService;
+import com.example.demo.entities.Product;
+import com.example.demo.services.ProductService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
